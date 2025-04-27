@@ -1,0 +1,47 @@
+{
+  "fechaprediccion": "2025-04-25",
+  "horaprediccion": "21:31",
+  "nomett": "Ing. Pedro Gallo / esq. Avenida Los Mares",
+  "paradero": "PI445",
+  "respuestaParadero": "No hay buses que se dirijan al paradero.",
+  "servicios": {
+    "item": [
+      {
+        "codigorespuesta": "10",
+        "distanciabus1": null,
+        "distanciabus2": null,
+        "horaprediccionbus1": null,
+        "horaprediccionbus2": null,
+        "ppubus1": null,
+        "ppubus2": null,
+        "respuestaServicio": "No hay buses que se dirijan al paradero.",
+        "servicio": "404",
+        "color": "#cf152d",
+        "destino": "Mapocho",
+        "sentido": "1",
+        "itinerario": False,
+        "codigo": "U13"
+      },
+      {
+        "codigorespuesta": "11",
+        "distanciabus1": null,
+        "distanciabus2": null,
+        "horaprediccionbus1": null,
+        "horaprediccionbus2": null,
+        "ppubus1": null,
+        "ppubus2": null,
+        "respuestaServicio": "Fuera de horario de operacion para este paradero",
+        "servicio": "404C",
+        "color": "#cf152d",
+        "destino": "Metro Las Rejas",
+        "sentido": "1",
+        "itinerario": False,
+        "codigo": "U13"
+      }
+    ]
+  },
+  "urlLinkPublicidad": null,
+  "urlPublicidad": "http://mkt.smsbus.cl/mkt/img/app_transantiago_320_118b.png",
+  "x": "-33.4681917",
+  "y": "-70.7402059"
+}
