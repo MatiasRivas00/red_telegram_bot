@@ -25,8 +25,8 @@ def red_parser(response):
 def reply_text(parsed_response):
     formated = []
     for bus in parsed_response:
-        distancia = f"{bus["distancia"]}m" if bus["distancia"] else "💤"
-        prediccion = f"({bus["prediccion"]})" if bus["prediccion"]  else "💤"
+        distancia = f"{bus['distancia']}m" if bus["distancia"] else "💤"
+        prediccion = f"({bus['prediccion']})" if bus["prediccion"]  else "💤"
         servicio = bus["servicio"]
         formated.append(f"🚍 {servicio} {distancia} {prediccion}")
     sep = [15*"➖"]
