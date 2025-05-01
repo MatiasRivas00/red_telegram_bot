@@ -51,6 +51,7 @@ async def prediction(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
         context.user_data['code']  = context.user_data.get('default_code')
     else:
         await update.message.reply_text('⚠️ A code must be provided or setted with /default_code PI445 for example')
+        return
     
     task = asyncio.create_task(prediction_loop(update, context))
     context.user_data['prediction_task'] = task
