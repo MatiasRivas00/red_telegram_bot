@@ -1,7 +1,7 @@
 import asyncio
 
 from telegram import Update
-from telegram.ext import ContextTypes, Application
+from telegram.ext import ContextTypes, Application, CommandHandler
 
 from services import red
 from parser import red_parser
@@ -96,20 +96,20 @@ async def info(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f"ℹ️ Default code setted is {code}, interval is {interval} seconds, during {duration} minutes")
 
 def add_to(app: Application):
-    app.add_handler("prediction", prediction)
-    app.add_handler("p", prediction)
+    app.add_handler(CommandHandler("prediction", prediction))
+    app.add_handler(CommandHandler("p", prediction))
 
-    app.add_handler("stop_prediction", stop_prediction)
-    app.add_handler("s", stop_prediction)
+    app.add_handler(CommandHandler("stop_prediction", stop_prediction))
+    app.add_handler(CommandHandler("s", stop_prediction))
 
-    app.add_handler("default_code", default_code)
-    app.add_handler("dc", default_code)
+    app.add_handler(CommandHandler("default_code", default_code))
+    app.add_handler(CommandHandler("dc", default_code))
 
-    app.add_handler("default_interval", default_interval)
-    app.add_handler("di", default_interval)
+    app.add_handler(CommandHandler("default_interval", default_interval))
+    app.add_handler(CommandHandler("di", default_interval))
 
-    app.add_handler("default_duration", default_duration)
-    app.add_handler("dd", default_duration)
+    app.add_handler(CommandHandler("default_duration", default_duration))
+    app.add_handler(CommandHandler("dd", default_duration))
 
-    app.add_handler("info", info)
-    app.add_handler("i", info)
+    app.add_handler(CommandHandler("info", info))
+    app.add_handler(CommandHandler("i", info))
