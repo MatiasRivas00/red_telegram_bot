@@ -74,9 +74,9 @@ async def app_kill():
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app_init()
+    await app_init()
     yield
-    app_kill()
+    await app_kill()
 
 app = FastAPI(lifespan=lifespan)
 
